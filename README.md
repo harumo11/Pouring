@@ -41,3 +41,19 @@ The target is setting environment that the experiment will be conduct.
 - pitch: 1.5708
 - yaw: 0
 - Height between yuguchi and syuttouguchi : 0.455m
+- link_s: 0.191253319383
+- link_l: -1.77183318138
+- link_e: -2.94609546661
+- link_u: 2.08333349228
+- link_r: 0.154142275453
+- link_b: -1.84653306007
+- link_t: -2.90557050705
+
+## Commands
+
+### moveit and connection
+
+```sh
+roslaunch motoman_sia20d_moveit_config moveit_planning_execution.launch sim:=false robot_ip:=10.0.0.2 controller:=fs100
+```
+
