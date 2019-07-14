@@ -34,20 +34,20 @@ The target is setting environment that the experiment will be conduct.
 
 ### Initial position
 
-- x : -0.5371
+- x : -0.6871
 - y : 0.003181
 - z : 0.7051
 - roll: 3.141592
 - pitch: 1.5708
 - yaw: 0
 - Height between yuguchi and syuttouguchi : 0.455m
-- link_s: 0.191253319383
-- link_l: -1.77183318138
-- link_e: -2.94609546661
-- link_u: 2.08333349228
-- link_r: 0.154142275453
-- link_b: -1.84653306007
-- link_t: -2.90557050705
+- link_s: -0.101685889065
+- link_l: -1.82054555416
+- link_e: -0.116684809327
+- link_u: -1.74737465382
+- link_r: -0.0732209980488
+- link_b: 1.48727786541
+- link_t: -0.10758920759
 
 ## Commands
 
@@ -56,4 +56,29 @@ The target is setting environment that the experiment will be conduct.
 ```sh
 roslaunch motoman_sia20d_moveit_config moveit_planning_execution.launch sim:=false robot_ip:=10.0.0.2 controller:=fs100
 ```
+
+### moveit! commander
+
+```sh
+rosrun moveit_commander moveit_commander_cmdline.py
+```
+
+### robot enable
+
+```sh
+rosservice call /robot_enable
+```
+
+### moving initial pose
+
+```sh
+cd /home/harumo/catkin_ws/src/sia20/sia20_control/script
+python move_init_pose.py
+```
+
+
+
+## topic
+
+topic name : `joint_path_command`
 
